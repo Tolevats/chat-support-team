@@ -10,32 +10,34 @@
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
-    <header class="header">
-        <h1>Clan Parra</h1>
-        <div class="header__navigation">
-            <button class="header__menu-button" aria-label="Toggle menu">Menu</button>
-            <nav class="header__nav">
-                <ul>
-                    <li>
-                        <a href="">Home</a>
+    <header class="header navbar navbar-expand-lg bg-body-tertiary">
+        <div class="header__navigation container-fluid">
+            <a class="navbar-brand" href="#"><strong>Clan Parra</strong></a>
+            <button class="header__menu-button navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <nav class="header__nav collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav nav-underline">
+                    <li class="nav-item">
+                        <a class="nav-link disabled" aria-disabled="true"  href="#">Home</a>
                     </li>
-                    <li>
-                        <a href="">FAQs</a>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" aria-disabled="true"  href="#">FAQs</a>
                     </li>
-                    <li>
-                        <a href="">Guides & Tutorials</a>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" aria-disabled="true"  href="#">Guides & Tutorials</a>
                     </li>
-                    <li>
-                        <a href="">News</a>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" aria-disabled="true"  href="#">News</a>
                     </li>
-                    <li>
-                        <a href="">Calendar</a>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" aria-disabled="true"  href="#">Calendar</a>
                     </li>
-                    <li>
-                        <a href="">Profile</a>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" aria-disabled="true" href="#">Profile</a>
                     </li>
-                    <li>
-                        <a href="">Chat</a>
+                    <li class="nav-item">
+                        <a  class="nav-link active" aria-current="page" href="">Chat</a>
                     </li>
                 </ul>
             </nav>
@@ -45,6 +47,74 @@
     <main class="main-content">
         <aside class="conversations-list">
             <!-- Conversation items will go here -->
+            <div class="accordion" id="accordionChats">
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      Recent conversations
+                    </button>
+                  </h2>
+                  <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionChats">
+                    <div class="accordion-body-flush">
+<!--                         <ul>
+                            <li>
+                                <picture></picture>
+
+                            </li>
+                        </ul> -->
+                        <div class="list-group">
+                            <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+                              <div class="d-flex w-100 justify-content-between">
+                                <h5 class="mb-1">Nicanor</h5>
+                                <small>23:33</small>
+                              </div>
+                              <p class="mb-1">Some placeholder content in a paragraph.</p>
+                              <small>And some small print.</small>
+                            </a>
+                            <a href="#" class="list-group-item list-group-item-action">
+                              <div class="d-flex w-100 justify-content-between">
+                                <h5 class="mb-1">Lalo</h5>
+                                <small class="text-body-secondary">Yesterday</small>
+                              </div>
+                              <p class="mb-1">Some placeholder content in a paragraph.</p>
+                              <small class="text-body-secondary">And some muted small print.</small>
+                            </a>
+                            <a href="#" class="list-group-item list-group-item-action">
+                              <div class="d-flex w-100 justify-content-between">
+                                <h5 class="mb-1">Roberto</h5>
+                                <small class="text-body-secondary">Monday</small>
+                              </div>
+                              <p class="mb-1">Some placeholder content in a paragraph.</p>
+                              <small class="text-body-secondary">And some muted small print.</small>
+                            </a>
+                            <a href="#" class="list-group-item list-group-item-action">
+                              <div class="d-flex w-100 justify-content-between">
+                                <h5 class="mb-1">Hilda</h5>
+                                <small class="text-body-secondary">3 days ago</small>
+                              </div>
+                              <p class="mb-1">Some placeholder content in a paragraph.</p>
+                              <small class="text-body-secondary">And some muted small print.</small>
+                            </a>
+                            <a href="#" class="list-group-item list-group-item-action">
+                              <div class="d-flex w-100 justify-content-between">
+                                <h5 class="mb-1">Lautaro</h5>
+                                <small class="text-body-secondary">A week ago</small>
+                              </div>
+                              <p class="mb-1">Some placeholder content in a paragraph.</p>
+                              <small class="text-body-secondary">And some muted small print.</small>
+                            </a>
+                            <a href="#" class="list-group-item list-group-item-action">
+                                <div class="d-flex w-100 justify-content-between">
+                                  <h5 class="mb-1">Óscar</h5>
+                                  <small class="text-body-secondary">2 weeks ago</small>
+                                </div>
+                                <p class="mb-1">Some placeholder content in a paragraph.</p>
+                                <small class="text-body-secondary">And some muted small print.</small>
+                              </a>
+                          </div>
+                    </div>
+                  </div>
+                </div>
         </aside>
         <section class="current-conversation">
             <!-- Current conversation messages will go here -->

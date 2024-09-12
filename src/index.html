@@ -48,6 +48,8 @@
         <aside class="conversations-list">
             <!-- Conversation items will go here -->
             <div class="accordion" id="accordionChats">
+              <input type="text" class="current-conversation__search" placeholder="Search conversations">
+              <img src="./assets/icons/search.svg" alt="magnifying-glass">
                 <div class="accordion-item">
                   <h2 class="accordion-header">
                     <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
@@ -56,62 +58,64 @@
                   </h2>
                   <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionChats">
                     <div class="accordion-body-flush">
-<!--                         <ul>
-                            <li>
-                                <picture></picture>
-
-                            </li>
-                        </ul> -->
-                        <div class="list-group">
-                            <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
-                              <div class="d-flex w-100 justify-content-between">
-                                <h5 class="mb-1">Nicanor</h5>
+                        <ul class="list-group">
+                            <li class="list-group-item list-group-item-action active" aria-current="true">
+                              <picture class="d-flex w-100 justify-content-between">
+                                <img src="./assets/imgs/violeta.jpg" alt="User" class="current-conversation__profile-image">
+                                <h6 class="mb-1">Violeta</h6>
                                 <small>23:33</small>
-                              </div>
-                              <p class="mb-1">Some placeholder content in a paragraph.</p>
-                              <small>And some small print.</small>
-                            </a>
-                            <a href="#" class="list-group-item list-group-item-action">
-                              <div class="d-flex w-100 justify-content-between">
-                                <h5 class="mb-1">Lalo</h5>
+                              </picture>
+                              <small class="mb-1">Yo canto a la diferencia que hay de</small>
+                            </li>
+                            <li class="list-group-item list-group-item-action">
+                              <picture class="d-flex w-100 justify-content-between">
+                                <img src="./assets/imgs/nicanor.jpg" alt="User" class="current-conversation__profile-image">
+                                <h6 class="mb-1">Nicanor</h6>
                                 <small class="text-body-secondary">Yesterday</small>
-                              </div>
-                              <p class="mb-1">Some placeholder content in a paragraph.</p>
-                              <small class="text-body-secondary">And some muted small print.</small>
-                            </a>
-                            <a href="#" class="list-group-item list-group-item-action">
-                              <div class="d-flex w-100 justify-content-between">
-                                <h5 class="mb-1">Roberto</h5>
+                              </picture>
+                              <small class="mb-1 text-body-secondary">El automóvil es una silla de ruedas</small>
+                            </li>
+                            <li class="list-group-item list-group-item-action">
+                              <picture class="d-flex w-100 justify-content-between">
+                                <img src="./assets/imgs/lalo.jpg" alt="User" class="current-conversation__profile-image">
+                                <h6 class="mb-1">Lalo</h6>
                                 <small class="text-body-secondary">Monday</small>
-                              </div>
-                              <p class="mb-1">Some placeholder content in a paragraph.</p>
-                              <small class="text-body-secondary">And some muted small print.</small>
-                            </a>
-                            <a href="#" class="list-group-item list-group-item-action">
-                              <div class="d-flex w-100 justify-content-between">
-                                <h5 class="mb-1">Hilda</h5>
+                              </picture>
+                              <small class="mb-1 text-body-secondary">La vida que yo he pasado 🎵</small>
+                            </li>
+                            <li class="list-group-item list-group-item-action">
+                              <picture class="d-flex w-100 justify-content-between">
+                                <img src="./assets/imgs/roberto.jpg" alt="User" class="current-conversation__profile-image">
+                                <h6 class="mb-1">Roberto</h6>
+                                <small class="text-body-secondary">Friday</small>
+                              </picture>
+                              <small class="mb-1 text-body-secondary">Conocí a la Negra Ester</small>
+                            </li>
+                            <li class="list-group-item list-group-item-action">
+                              <picture class="d-flex w-100 justify-content-between">
+                                <img src="./assets/imgs/hilda.jpg" alt="User" class="current-conversation__profile-image">
+                                <h6 class="mb-1">Hilda</h6>
                                 <small class="text-body-secondary">3 days ago</small>
-                              </div>
-                              <p class="mb-1">Some placeholder content in a paragraph.</p>
-                              <small class="text-body-secondary">And some muted small print.</small>
-                            </a>
-                            <a href="#" class="list-group-item list-group-item-action">
-                              <div class="d-flex w-100 justify-content-between">
-                                <h5 class="mb-1">Lautaro</h5>
+                              </picture>
+                              <small class="mb-1 text-body-secondary">La cuequera más grande de Chile</small>
+                            </li>
+                            <li class="list-group-item list-group-item-action">
+                              <picture class="d-flex w-100 justify-content-between">
+                                <img src="./assets/imgs/lautaro.jpg" alt="User" class="current-conversation__profile-image">
+                                <h6 class="mb-1">Lautaro</h6>
                                 <small class="text-body-secondary">A week ago</small>
-                              </div>
-                              <p class="mb-1">Some placeholder content in a paragraph.</p>
-                              <small class="text-body-secondary">And some muted small print.</small>
-                            </a>
-                            <a href="#" class="list-group-item list-group-item-action">
-                                <div class="d-flex w-100 justify-content-between">
-                                  <h5 class="mb-1">Óscar</h5>
-                                  <small class="text-body-secondary">2 weeks ago</small>
-                                </div>
-                                <p class="mb-1">Some placeholder content in a paragraph.</p>
-                                <small class="text-body-secondary">And some muted small print.</small>
-                              </a>
-                          </div>
+                              </picture>
+                              <small class="mb-1 text-body-secondary">Volver a Chile es como ver un film</small>
+                            </li>
+                            <li class="list-group-item list-group-item-action">
+                              <picture class="d-flex w-100 justify-content-between">
+                                <img src="./assets/imgs/oscar.jpg" alt="User" class="current-conversation__profile-image">
+                                <h6>Óscar</h6>
+                                <small class="text-body-secondary">01-11-24</small>
+                              </picture>
+                              <small class="mb-1 text-body-secondary">El Parra menos Parra</small>
+                            </li>
+                        </ul>
                     </div>
                   </div>
                 </div>
@@ -121,18 +125,23 @@
             <div class="current-conversation__header">
                 <img src="./assets/imgs/violeta.jpg" alt="User" class="current-conversation__profile-image">
                 <h2 class="current-conversation__user-name">Violeta</h2>
-                <input type="text" class="current-conversation__search" placeholder="Search conversations">
+                <br>
+               <input type="text" class="current-conversation__search" placeholder="Search">
             </div>
             <div class="current-conversation__messages">
                 <!-- Message bubbles will go here -->
             </div>
             <div class="current-conversation__attachment">
-                <button type="button" class="attachment-button">Attach</button>
-                <label for="menu-dropdown">Choose file type</label>
+                <button type="button" class="attachment-button">
+                  <img src="./assets/icons/paperclip.svg" alt="paperclip">
+                </button>
+                <label for="menu-dropdown"></label>
                 <select name="menu" id="menu-dropdown" class="attachment-dropdown">
-                    <option class="attachment-dropdown__item" value="image">Image</option>
+                    <option class="attachment-dropdown__item" value="image">Photo
+                      <img src="./assets/icons/image.svg" alt="image">
+                    </option>
                     <option class="attachment-dropdown__item" value="video">Video</option>
-                    <option class="attachment-dropdown__item" value="document">Document</option>
+                    <option class="attachment-dropdown__item" value="document">File</option>
                 </select>
             </div>
         </section>

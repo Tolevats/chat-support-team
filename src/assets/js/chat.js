@@ -1,5 +1,12 @@
 // scripts.js
 
+//when clicked unread messages with bold will remove class dynamically
+document.querySelectorAll('.chats-list__item').forEach(item => {
+    item.addEventListener('click', () => {
+        item.classList.remove('chats-list__item--unread');
+    });
+});
+
 const searchToggleButton = document.querySelector('.current-chat__search-toggle');
 const searchInput = document.querySelector('.current-chat__search-input');
 
@@ -30,7 +37,7 @@ attachmentButton.addEventListener('click', function() {
 });
 
 // Example of conversation search (non-functional)
-const searchInput = document.querySelector('.current-conversation__search');
+const searchInput = document.querySelector('.current-chat__search');
 searchInput.addEventListener('input', function() {
     console.log('Search input:', searchInput.value);
 });

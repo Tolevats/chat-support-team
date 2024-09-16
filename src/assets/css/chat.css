@@ -1,9 +1,0 @@
-
-
-.conversation-list--unread {
-    background-color: #ffffe0; /* Yellow background for unread conversations */
-}
-
-.conversation-list--collapsed {
-    display: none; /* Hide collapsed conversation list items */
-}

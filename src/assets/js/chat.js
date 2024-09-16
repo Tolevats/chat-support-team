@@ -1,5 +1,12 @@
 // scripts.js
 
+const searchToggleButton = document.querySelector('.current-chat__search-toggle');
+const searchInput = document.querySelector('.current-chat__search-input');
+
+searchToggleButton.addEventListener('click', () => {
+    searchInput.classList.toggle('visible');
+});
+/* 
 // Toggle conversations list on mobile
 document.querySelector('.header__menu-button').addEventListener('click', function() {
     const conversationsList = document.querySelector('.conversations-list');
@@ -35,4 +42,4 @@ conversationListItems.forEach(item => {
     if (item.dataset.unread === 'true') {
         item.classList.add('conversation-list--unread');
     }
-});
+}); */

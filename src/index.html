@@ -10,28 +10,31 @@
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
-    <header class="header navbar navbar-expand-lg bg-body-tertiary">
-        <div class="header__navigation container-fluid">
-            <a class="navbar-brand" href="#"><strong>Clan Parra</strong></a>
+    <header class="header navbar navbar-expand-md bg-body>
+      <div class="header__navigation container-fluid">
+            <a class="navbar-brand" href="#">
+              <img src="./assets/imgs/musical-note.png" alt="Logo">
+              <strong class="navbar-brand__name">Clan Parra</strong>
+            </a>
             <button class="header__menu-button navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <nav class="header__nav collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav nav-underline">
+                <ul class="navbar-nav ms-auto nav-underline">
                     <li class="nav-item">
-                        <a class="nav-link disabled" aria-disabled="true"  href="#">Home</a>
+                        <a class="nav-link disabled" aria-disabled="true" href="#">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link disabled" aria-disabled="true"  href="#">FAQs</a>
+                        <a class="nav-link disabled" aria-disabled="true" href="#">FAQs</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link disabled" aria-disabled="true"  href="#">Guides & Tutorials</a>
+                        <a class="nav-link disabled" aria-disabled="true" href="#">Guides & Tutorials</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link disabled" aria-disabled="true"  href="#">News</a>
+                        <a class="nav-link disabled" aria-disabled="true" href="#">News</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link disabled" aria-disabled="true"  href="#">Calendar</a>
+                        <a class="nav-link disabled" aria-disabled="true" href="#">Calendar</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link disabled" aria-disabled="true" href="#">Profile</a>
@@ -41,108 +44,116 @@
                     </li>
                 </ul>
             </nav>
-        </div>
+      </div>
     </header>
     
     <main class="main-content">
-        <aside class="conversations-list">
-            <!-- Conversation items will go here -->
-            <div class="accordion" id="accordionChats">
-              <input type="text" class="current-conversation__search" placeholder="Search conversations">
-              <img src="./assets/icons/search.svg" alt="magnifying-glass">
-                <div class="accordion-item">
-                  <h2 class="accordion-header">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                      Recent conversations
-                    </button>
-                  </h2>
-                  <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionChats">
-                    <div class="accordion-body-flush">
-                        <ul class="list-group">
-                            <li class="list-group-item list-group-item-action active" aria-current="true">
-                              <picture class="d-flex w-100 justify-content-between">
-                                <img src="./assets/imgs/violeta.jpg" alt="User" class="current-conversation__profile-image">
-                                <h6 class="mb-1">Violeta</h6>
-                                <small>23:33</small>
-                              </picture>
-                              <small class="mb-1">Yo canto a la diferencia que hay de</small>
-                            </li>
-                            <li class="list-group-item list-group-item-action">
-                              <picture class="d-flex w-100 justify-content-between">
-                                <img src="./assets/imgs/nicanor.jpg" alt="User" class="current-conversation__profile-image">
-                                <h6 class="mb-1">Nicanor</h6>
-                                <small class="text-body-secondary">Yesterday</small>
-                              </picture>
-                              <small class="mb-1 text-body-secondary">El automóvil es una silla de ruedas</small>
-                            </li>
-                            <li class="list-group-item list-group-item-action">
-                              <picture class="d-flex w-100 justify-content-between">
-                                <img src="./assets/imgs/lalo.jpg" alt="User" class="current-conversation__profile-image">
-                                <h6 class="mb-1">Lalo</h6>
-                                <small class="text-body-secondary">Monday</small>
-                              </picture>
-                              <small class="mb-1 text-body-secondary">La vida que yo he pasado 🎵</small>
-                            </li>
-                            <li class="list-group-item list-group-item-action">
-                              <picture class="d-flex w-100 justify-content-between">
-                                <img src="./assets/imgs/roberto.jpg" alt="User" class="current-conversation__profile-image">
-                                <h6 class="mb-1">Roberto</h6>
-                                <small class="text-body-secondary">Friday</small>
-                              </picture>
-                              <small class="mb-1 text-body-secondary">Conocí a la Negra Ester</small>
-                            </li>
-                            <li class="list-group-item list-group-item-action">
-                              <picture class="d-flex w-100 justify-content-between">
-                                <img src="./assets/imgs/hilda.jpg" alt="User" class="current-conversation__profile-image">
-                                <h6 class="mb-1">Hilda</h6>
-                                <small class="text-body-secondary">3 days ago</small>
-                              </picture>
-                              <small class="mb-1 text-body-secondary">La cuequera más grande de Chile</small>
-                            </li>
-                            <li class="list-group-item list-group-item-action">
-                              <picture class="d-flex w-100 justify-content-between">
-                                <img src="./assets/imgs/lautaro.jpg" alt="User" class="current-conversation__profile-image">
-                                <h6 class="mb-1">Lautaro</h6>
-                                <small class="text-body-secondary">A week ago</small>
-                              </picture>
-                              <small class="mb-1 text-body-secondary">Volver a Chile es como ver un film</small>
-                            </li>
-                            <li class="list-group-item list-group-item-action">
-                              <picture class="d-flex w-100 justify-content-between">
-                                <img src="./assets/imgs/oscar.jpg" alt="User" class="current-conversation__profile-image">
-                                <h6>Óscar</h6>
-                                <small class="text-body-secondary">01-11-24</small>
-                              </picture>
-                              <small class="mb-1 text-body-secondary">El Parra menos Parra</small>
-                            </li>
-                        </ul>
-                    </div>
-                  </div>
-                </div>
+      <!-- Recent chats area -->
+        <aside class="chats-list">
+          <div class="chats-list__header">
+            <h4 class="chats-list__title">Chats</h4>
+            <button class="btn d-md-none chats-list__toggle-btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseChats" aria-expanded="false" aria-controls="collapseChats">
+              Recent chats
+            </button>
+          </div>
+          <div id="collapseChats" class="collapse d-md-block">
+            <!-- Recent chats search bar -->
+            <div class="chats-list__search-container">
+              <input type="text" class="chats-list__search-input" placeholder="Search conversations">
+              <img src="./assets/icons/search.svg" alt="Search" class="chats-list__search-icon">
+            </div>
+            <!-- Recent chats display-->
+            <ul class="chats-list__items list-group">
+              <li class="chats-list__item--unread list-group-item list-group-item-action">
+                <picture class="chats-list__picture d-flex w-100">
+                  <img src="./assets/imgs/violeta.jpg" alt="User" class="chats-list__profile-image">
+                  <h6 class="chats-list__name mb-1">Violeta</h6>
+                  <small class="chats-list__time">23:33</small>
+                </picture>
+                <small class="chats-list__message mb-1">Yo canto a la diferencia que hay de</small>
+              </li>
+              <li class="chats-list__item--unread list-group-item list-group-item-action">
+                <picture class="chats-list__picture d-flex w-100 justify-content-between">
+                  <img src="./assets/imgs/nicanor.jpg" alt="User" class="chats-list__profile-image">
+                  <h6 class="chats-list__name mb-1">Nicanor</h6>
+                  <small class="chats-list__time text-body-secondary">Yesterday</small>
+                </picture>
+                <small class="chats-list__message mb-1 text-body-secondary">El automóvil es una silla de ruedas</small>
+              </li>
+              <li class="chats-list__item list-group-item list-group-item-action">
+                <picture class="chats-list__picture d-flex w-100 justify-content-between">
+                  <img src="./assets/imgs/lalo.jpg" alt="User" class="chats-list__profile-image">
+                  <h6 class="chats-list__name mb-1">Lalo</h6>
+                  <small class="chats-list__time text-body-secondary">Monday</small>
+                </picture>
+                <small class="chats-list__message mb-1 text-body-secondary">La vida que yo he pasado 🎵</small>
+              </li>
+              <li class="chats-list__item list-group-item list-group-item-action">
+                <picture class="chats-list__picture d-flex w-100 justify-content-between">
+                  <img src="./assets/imgs/roberto.jpg" alt="User" class="chats-list__profile-image">
+                  <h6 class="chats-list__name mb-1">Roberto</h6>
+                  <small class="chats-list__time text-body-secondary">Friday</small>
+                </picture>
+                <small class="chats-list__message mb-1 text-body-secondary">Conocí a la Negra Ester</small>
+              </li>
+              <li class="chats-list__item list-group-item list-group-item-action">
+                <picture class="chats-list__picture d-flex w-100 justify-content-between">
+                  <img src="./assets/imgs/hilda.jpg" alt="User" class="chats-list__profile-image">
+                  <h6 class="chats-list__name mb-1">Hilda</h6>
+                  <small class="chats-list__time text-body-secondary">3 days ago</small>
+                </picture>
+                <small class="chats-list__message mb-1 text-body-secondary">La cuequera más grande de Chile</small>
+              </li>
+              <li class="chats-list__item list-group-item list-group-item-action">
+                <picture class="chats-list__picture d-flex w-100 justify-content-between">
+                  <img src="./assets/imgs/lautaro.jpg" alt="User" class="chats-list__profile-image">
+                  <h6 class="chats-list__name mb-1">Lautaro</h6>
+                  <small class="chats-list__time text-body-secondary">A week ago</small>
+                </picture>
+                <small class="chats-list__message mb-1 text-body-secondary">Volver a Chile es como ver un film</small>
+              </li>
+              <li class="chats-list__item list-group-item list-group-item-action">
+                <picture class="chats-list__picture d-flex w-100 justify-content-between">
+                  <img src="./assets/imgs/oscar.jpg" alt="User" class="chats-list__profile-image">
+                  <h6 class="chats-list__name mb-1">Óscar</h6>
+                  <small class="chats-list__time text-body-secondary">01-11-24</small>
+                </picture>
+                <small class="chats-list__message mb-1 text-body-secondary">El Parra menos Parra</small>
+              </li>
+            </ul>
+          </div>
         </aside>
-        <section class="current-conversation">
-            <!-- Current conversation messages will go here -->
-            <div class="current-conversation__header">
-                <img src="./assets/imgs/violeta.jpg" alt="User" class="current-conversation__profile-image">
-                <h2 class="current-conversation__user-name">Violeta</h2>
-                <br>
-               <input type="text" class="current-conversation__search" placeholder="Search">
-            </div>
-            <div class="current-conversation__messages">
-                <!-- Message bubbles will go here -->
-            </div>
-            <div class="current-conversation__attachment">
-                <button type="button" class="attachment-button">
-                  <img src="./assets/icons/paperclip.svg" alt="paperclip">
+        <!-- Current Chat -->
+        <section class="current-chat">
+            <header class="current-chat__header">
+                <img src="./assets/imgs/violeta.jpg" alt="User" class="current-chat__profile-image">
+                <h2 class="current-chat__user-name">Violeta</h2>
+                <button type="button" class="current-chat__search-toggle">
+                  <img src="./assets/icons/search.svg" alt="Search">
                 </button>
-                <label for="menu-dropdown"></label>
-                <select name="menu" id="menu-dropdown" class="attachment-dropdown">
-                    <option class="attachment-dropdown__item" value="image">Photo
-                      <img src="./assets/icons/image.svg" alt="image">
-                    </option>
-                    <option class="attachment-dropdown__item" value="video">Video</option>
-                    <option class="attachment-dropdown__item" value="document">File</option>
-                </select>
+               <input type="text" class="current-chat__search-input" placeholder="Search">
+            </header>
+            <!-- current chat messages area -->
+            <div class="current-chat__messages">
+              <div class="chat-bubble chat-bubble--user">This is my message.</div>
+              <div class="chat-bubble chat-bubble--received">This is a reply.</div>
+            </div>
+            <!-- current chat bottom area -->
+            <div class="current-chat__footer">
+              <div class="dropdown">
+                <button class="current-chat__attachment-button dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                  <img src="./assets/icons/paperclip.svg" alt="Attach">
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <li><a class="dropdown-item" href="#"><img src="./assets/icons/file-earmark-text.svg" alt="File"> File</a></li>
+                  <li><a class="dropdown-item" href="#"><img src="./assets/icons/image.svg" alt="Photo"> Photo</a></li>
+                  <li><a class="dropdown-item" href="#"><img src="./assets/icons/file-play.svg" alt="Video"> Video</a></li>
+                </ul>
+              </div>
+                <textarea name="current-chat__input" id="" placeholder="Type a message"></textarea>
+                <button class="current-chat__send-button">
+                  <img src="./assets/icons/send-fill.svg" alt="Send">
+                </button>
             </div>
         </section>
     </main>

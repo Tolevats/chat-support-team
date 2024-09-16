@@ -1,18 +1,25 @@
-/* styles.css */
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+CU:wght@100..400&display=swap');
 
+/* BEM Methodology and Mobile First CSS */
+
+/* reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* general layout for the page */
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: #f4f4f4;
+    background-color:#f4f4f4;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .header {
-    background-color: #333;
+    background-color: #2B2A4C;
     color: #fff;
     padding: 10px;
     display: flex;
@@ -22,6 +29,7 @@ body {
 
 .header__navigation {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
 }
 
@@ -33,107 +41,330 @@ body {
     display: flex;
 }
 
-.header__nav a {
+.navbar-brand__name {
     color: #fff;
+    font-family: "Playwrite CU", cursive;
+    font-size: 30px;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.header .nav-link {
+    color: #ccc;
     text-decoration: none;
     margin-left: 10px;
 }
 
-/* Main Content */
-.main-content {
-    display: flex;
-    flex-direction: row;
-    height: calc(100vh - 50px); /* Adjust based on header height */
+.header .nav-link.active {
+    color: #fff;
 }
 
-.conversations-list {
-    width: 300px;
+.header .nav-link:hover {
+    color: #B31312;
+}
+
+/* main content */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    overflow: hidden;
+}
+
+/* ----- styling for chat list (left sidebar) ----- */
+.chats-list {
+    width: 100%;
+    max-width: 300px;
     background-color: #fff;
+    border-right: 1px solid #dee2e6;
     box-shadow: 0 0 5px rgba(0,0,0,0.1);
     overflow-y: auto;
     display: block;
+    height: 100vh;
 }
 
-.current-conversation {
+.chats-list__title {
+    display: none;
+}
+
+.chats-list__toggle-btn {
+    background-color: #B31312;
+    color: #EEE2DE;
+    border: none;
+    width: 100%;
+    max-width: 100%;
+    margin: 20px;
+}
+  
+.chats-list__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chats-list__search-container {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+  }
+  
+.chats-list__search-input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+  }
+  
+.chats-list__search-icon {
+    width: 20px;
+    margin-left: 10px;
+  }
+
+.chats-list__items {
+    width: 100%;
+    max-width: 100%; /* Ensure the width is respected */
+}
+
+.chats-list__item {
+    width: 100%;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px; /* padding: 0.75rem 1rem; */
+    border-bottom: 1px solid #ccc;
+/*     transition: background-color 0.3s ease; */
+}
+ 
+.chats-list__item:hover {
+    background-color: #e9ecef;
+}
+
+.chat-list__picture {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between image and name */
+    width: 100%;
+} 
+
+.chats-list__profile-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.chats-list__name {
+    font-size: 1rem;
+}
+
+.chats-list__time {
+    color: #adb5bd;  /* #888; */
+    font-size: 0.75rem; /* 0.8rem; */
+}
+
+.chats-list__message {
+    font-size: 0.9rem;
+    color: #6c757d;
+    margin-top: 4px;
+}
+
+.chats-list__item--unread .chats-list__name {
+    font-weight: bold;
+}
+
+.chats-list__item--unread .chats-list__time {
+    font-weight: bold;
+    color: #000;
+}
+  
+/* ----- styling for the chat window (right section) ----- */
+.current-chat {
     flex: 1;
-    padding: 10px;
-    background: #fff;
+    display: flex;
+    flex-direction: column;
+    background-image: url("/src/assets/imgs/geometric-leaves.webp");
     border-left: 1px solid #ddd;
 }
 
-.current-conversation__header {
+.current-chat__header {
     display: flex;
     align-items: center;
-    background: #e1e1e1;
-    padding: 10px;
+    background: #EEE2DE;
+    /* padding: 0.75rem 1rem;  10px */
+    width: 100%;
 }
 
-.current-conversation__profile-image {
+.current-chat__profile-image {
     width: 50px;
     height: 50px;
     border-radius: 50%;
+    padding: 10px;
     margin-right: 10px;
     transition: transform 0.3s;
 }
 
-.current-conversation__profile-image:hover {
+.current-chat__profile-image:hover {
     transform: scale(1.1);
 }
 
-.current-conversation__user-name {
-    flex: 1;
+.current-chat__user-name {
+    font-size: 1.2rem;
+    flex-grow: 1;
 }
 
-.current-conversation__search {
+.current-chat__search-toggle {
+    width: 20px;
+    background: none;
+    border: none;
+    padding-right: 40px;
+  }
+
+.current-chat__search-input {
+    display: none;
     width: 100%;
-    padding: 5px;
-    margin-top: 5px;
+    padding: 0.5rem;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
 }
 
-.current-conversation__messages {
-    padding: 10px;
-}
-
-.current-conversation__attachment {
+.current-chat__messages {
+    flex: 1;
+    padding: 1rem;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 10px;
+    flex-direction: column;
+    gap: 10px;
+    overflow-y: auto;
 }
 
-.attachment-dropdown {
-    display: none; /* Hidden by default */
-    position: absolute;
-    background: #fff;
-    border: 1px solid #ddd;
+.chat-bubble {
     padding: 10px;
+    border-radius: 20px;
+    margin: 10px;
+    max-width: 70%;
+    word-wrap: break-word;
+    position: relative; /* required for positioning the pseudo-element */
 }
 
-.attachment-button {
-    background: #007bff;
+.chat-bubble--user {
+    background-color: #EA906C;
+    color: #fff;
+    align-self: flex-end;
+}
+
+.chat-bubble--user::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    right: 16px; /* Position the triangle on the right for user bubbles */
+    border-width: 10px;
+    border-style: solid;
+    margin-top: -25px;
+	margin-right: -25px;
+    border-color: #EA906C transparent transparent transparent; /* Matching bubble color with the user's bubble */
+}
+
+.chat-bubble--received {
+    background-color: #EEE2DE;
+    align-self: flex-start;
+}
+
+.chat-bubble--received::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: -10px; /* Position the triangle on the left for received bubbles */
+    border-width: 10px;
+    border-style: solid;
+    margin-top: -25px;
+	margin-right: -25px;
+    border-color: #EEE2DE transparent transparent transparent; /* Matching bubble color with the received bubble */
+}
+
+/* ----- current chat input area ----- */
+.current-chat__footer {
+    display: flex;
+    align-items: center;
+    background-color: #2B2A4C;
+    padding: 0.75rem;
+  }
+
+.current-chat__file-input {
+    display: none;
+}
+
+.dropdown-menu {
+    min-width: 160px;
+}
+.current-chat__attachment-button {
+    background: none;
     color: #fff;
     border: none;
     padding: 10px;
-    cursor: pointer;
 }
 
-.attachment-button:hover + .attachment-dropdown,
-.attachment-dropdown:hover {
-    display: block;
+.current-chat__attachment-button img {
+    width: 20px;
+}
+  
+.current-chat__send-button {
+    background: none;
+    border: none;
+    padding: 10px;
+}
+  
+.current-chat__send-button img {
+    width: 20px;
+}
+  
+textarea {
+    width: 100%;
+    height: 2.5rem;
+    padding: 0.5rem;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    resize: none;
+}
+
+/* footer */
+footer {
+    text-align: center;
 }
 
 /* Mobile Styles */
 @media (max-width: 768px) {
-    .main-content {
-        flex-direction: column;
-    }
-
-    .conversations-list {
-        width: 100%;
-        display: none; /* Hidden on mobile, shown via button */
-    }
-
     .header__menu-button {
         display: block;
+    }
+    .chats-list {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+/* On tablet screens and up, show the chat list by default */
+@media (min-width: 768px) {
+    .main-content {
+        flex-direction: row;
+    }
+    .chats-list {
+        display: block;
+      }
+    .chats-list__title {
+        display: block;
+        padding: 20px 0 0 20px;
+    }
+    .chats-list__toggle-btn {
+        display: none; /* Hide the toggle button on tablet and up */
+    }
+    #collapseChats {
+        display: block !important; /* Keep the chat list expanded */
+    }
+    .current-chat__search-input {
+/*         display: block;
+        width: 100%;
+        padding: 0.5rem;
+        border: 1px solid #ced4da;
+        border-radius: 5px; */
     }
 }

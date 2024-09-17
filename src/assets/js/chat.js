@@ -1,7 +1,7 @@
 // scripts.js
 
 //when clicked unread messages with bold will remove class dynamically
-document.querySelectorAll('.chats-list__item').forEach(item => {
+document.querySelectorAll('.chats-list__item--unread').forEach(item => {
     item.addEventListener('click', () => {
         item.classList.remove('chats-list__item--unread');
     });

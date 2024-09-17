@@ -52,7 +52,7 @@
         <aside class="chats-list">
           <div class="chats-list__header">
             <h4 class="chats-list__title">Chats</h4>
-            <button class="btn d-md-none chats-list__toggle-btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseChats" aria-expanded="false" aria-controls="collapseChats">
+            <button class="chats-list__toggle-btn btn d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseChats" aria-expanded="false" aria-controls="collapseChats">
               Recent chats
             </button>
           </div>
@@ -65,59 +65,73 @@
             <!-- Recent chats display-->
             <ul class="chats-list__items list-group">
               <li class="chats-list__item--unread list-group-item list-group-item-action">
-                <picture class="chats-list__picture d-flex w-100">
+                <div class="chats-list__card d-flex">
                   <img src="./assets/imgs/violeta.jpg" alt="User" class="chats-list__profile-image">
-                  <h6 class="chats-list__name mb-1">Violeta</h6>
-                  <small class="chats-list__time">23:33</small>
-                </picture>
-                <small class="chats-list__message mb-1">Yo canto a la diferencia que hay de</small>
+                  <div class="chats-list__name-time-container">
+                    <h6 class="chats-list__name mb-1">Violeta</h6>
+                    <small class="chats-list__time text-body-secondary">23:33</small>  
+                  </div>
+                </div>
+                <small class="chats-list__message mb-1 text-body-secondary">Yo canto a la diferencia</small>
               </li>
               <li class="chats-list__item--unread list-group-item list-group-item-action">
-                <picture class="chats-list__picture d-flex w-100 justify-content-between">
+                <div class="chats-list__card d-flex">
                   <img src="./assets/imgs/nicanor.jpg" alt="User" class="chats-list__profile-image">
-                  <h6 class="chats-list__name mb-1">Nicanor</h6>
-                  <small class="chats-list__time text-body-secondary">Yesterday</small>
-                </picture>
+                  <div class="chats-list__name-time-container">
+                    <h6 class="chats-list__name mb-1">Nicanor</h6>
+                    <small class="chats-list__time text-body-secondary">Yesterday</small>  
+                  </div>
+                </div>
                 <small class="chats-list__message mb-1 text-body-secondary">El automóvil es una silla de ruedas</small>
               </li>
-              <li class="chats-list__item list-group-item list-group-item-action">
-                <picture class="chats-list__picture d-flex w-100 justify-content-between">
+              <li class="chats-list__item--unread list-group-item list-group-item-action">
+                <div class="chats-list__card d-flex">
                   <img src="./assets/imgs/lalo.jpg" alt="User" class="chats-list__profile-image">
-                  <h6 class="chats-list__name mb-1">Lalo</h6>
-                  <small class="chats-list__time text-body-secondary">Monday</small>
-                </picture>
+                  <div class="chats-list__name-time-container">
+                    <h6 class="chats-list__name mb-1">Lalo</h6>
+                    <small class="chats-list__time  text-body-secondary">Monday</small>
+                  </div>
+                </div>
                 <small class="chats-list__message mb-1 text-body-secondary">La vida que yo he pasado 🎵</small>
               </li>
-              <li class="chats-list__item list-group-item list-group-item-action">
-                <picture class="chats-list__picture d-flex w-100 justify-content-between">
+              <li class="chats-list__item--unread list-group-item list-group-item-action">
+                <div class="chats-list__card d-flex">
                   <img src="./assets/imgs/roberto.jpg" alt="User" class="chats-list__profile-image">
-                  <h6 class="chats-list__name mb-1">Roberto</h6>
-                  <small class="chats-list__time text-body-secondary">Friday</small>
-                </picture>
+                  <div class="chats-list__name-time-container">
+                    <h6 class="chats-list__name mb-1">Roberto</h6>
+                    <small class="chats-list__time text-body-secondary">Friday</small>
+                  </div>
+                </div>
                 <small class="chats-list__message mb-1 text-body-secondary">Conocí a la Negra Ester</small>
               </li>
-              <li class="chats-list__item list-group-item list-group-item-action">
-                <picture class="chats-list__picture d-flex w-100 justify-content-between">
+              <li class="chats-list__item--unread list-group-item list-group-item-action">
+                <div class="chats-list__card d-flex">
                   <img src="./assets/imgs/hilda.jpg" alt="User" class="chats-list__profile-image">
-                  <h6 class="chats-list__name mb-1">Hilda</h6>
-                  <small class="chats-list__time text-body-secondary">3 days ago</small>
-                </picture>
+                  <div class="chats-list__name-time-container">
+                    <h6 class="chats-list__name mb-1">Hilda</h6>
+                    <small class="chats-list__time text-body-secondary">3 days ago</small>
+                  </div>
+                </div>
                 <small class="chats-list__message mb-1 text-body-secondary">La cuequera más grande de Chile</small>
               </li>
-              <li class="chats-list__item list-group-item list-group-item-action">
-                <picture class="chats-list__picture d-flex w-100 justify-content-between">
-                  <img src="./assets/imgs/lautaro.jpg" alt="User" class="chats-list__profile-image">
-                  <h6 class="chats-list__name mb-1">Lautaro</h6>
-                  <small class="chats-list__time text-body-secondary">A week ago</small>
-                </picture>
+              <li class="chats-list__item--unread list-group-item list-group-item-action">
+                <div class="chats-list__card d-flex">
+                  <div class="chats-list__name-time-container">
+                    <img src="./assets/imgs/lautaro.jpg" alt="User" class="chats-list__profile-image">
+                    <h6 class="chats-list__name mb-1">Lautaro</h6>
+                    <small class="chats-list__time text-body-secondary">A week ago</small>  
+                  </div>
+                </div>
                 <small class="chats-list__message mb-1 text-body-secondary">Volver a Chile es como ver un film</small>
               </li>
-              <li class="chats-list__item list-group-item list-group-item-action">
-                <picture class="chats-list__picture d-flex w-100 justify-content-between">
-                  <img src="./assets/imgs/oscar.jpg" alt="User" class="chats-list__profile-image">
-                  <h6 class="chats-list__name mb-1">Óscar</h6>
-                  <small class="chats-list__time text-body-secondary">01-11-24</small>
-                </picture>
+              <li class="chats-list__item--unread list-group-item list-group-item-action">
+                <div class="chats-list__card d-flex">
+                  <div class="chats-list__name-time-container">
+                    <img src="./assets/imgs/oscar.jpg" alt="User" class="chats-list__profile-image">
+                    <h6 class="chats-list__name mb-1">Óscar</h6>  
+                    <small class="chats-list__time text-body-secondary">01-11-24</small>
+                  </div>
+                </div>
                 <small class="chats-list__message mb-1 text-body-secondary">El Parra menos Parra</small>
               </li>
             </ul>
@@ -135,8 +149,8 @@
             </header>
             <!-- current chat messages area -->
             <div class="current-chat__messages">
-              <div class="chat-bubble chat-bubble--user">This is my message.</div>
-              <div class="chat-bubble chat-bubble--received">This is a reply.</div>
+              <div class="chat-bubble chat-bubble--user">¡Hola Violeta!</div>
+              <div class="chat-bubble chat-bubble--received">Bonjour, comment puis-je vous aider ?</div>
             </div>
             <!-- current chat bottom area -->
             <div class="current-chat__footer">

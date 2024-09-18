@@ -1,12 +1,190 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chat</title>
+     <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+     <!-- custom style -->
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
+    <header class="header navbar navbar-expand-md">
+      <div class="header__navigation container-fluid">
+            <a class="navbar-brand" href="#">
+              <img src="./assets/imgs/musical-note.png" alt="Logo">
+              <strong class="navbar-brand__name">Clan Parra</strong>
+            </a>
+            <button class="header__menu-button navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <nav class="header__nav collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto nav-underline">
+                    <li class="nav-item">
+                        <a class="nav-link disabled" aria-disabled="true" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" aria-disabled="true" href="#">FAQs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" aria-disabled="true" href="#">Guides & Tutorials</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" aria-disabled="true" href="#">News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" aria-disabled="true" href="#">Calendar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" aria-disabled="true" href="#">Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a  class="nav-link active" aria-current="page" href="">Chat</a>
+                    </li>
+                </ul>
+            </nav>
+      </div>
+    </header>
+    
+    <main class="main-content">
+      <!-- Recent chats area -->
+        <aside class="chats-list">
+          <div class="chats-list__header">
+            <h4 class="chats-list__title">Chats</h4>
+            <button class="chats-list__toggle-btn btn d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseChats" aria-expanded="false" aria-controls="collapseChats">
+              Recent chats
+            </button>
+          </div>
+          <div id="collapseChats" class="collapse d-md-block">
+            <!-- Recent chats search bar -->
+            <div class="chats-list__search-container">
+              <input type="text" class="chats-list__search-input" placeholder="Search conversations">
+              <img src="./assets/icons/search.svg" alt="Search" class="chats-list__search-icon">
+            </div>
+            <!-- Recent chats display-->
+            <ul class="chats-list__items list-group">
+              <li class="chats-list__item--unread list-group-item list-group-item-action">
+                <div class="chats-list__card d-flex">
+                  <img src="./assets/imgs/violeta.jpg" alt="User" class="chats-list__profile-image">
+                  <div class="chats-list__name-time-container">
+                    <h6 class="chats-list__name mb-1">Violeta</h6>
+                    <small class="chats-list__time text-body-secondary">23:33</small>  
+                  </div>
+                </div>
+                <small class="chats-list__message mb-1 text-body-secondary">Yo canto a la diferencia</small>
+              </li>
+              <li class="chats-list__item--unread list-group-item list-group-item-action">
+                <div class="chats-list__card d-flex">
+                  <img src="./assets/imgs/nicanor.jpg" alt="User" class="chats-list__profile-image">
+                  <div class="chats-list__name-time-container">
+                    <h6 class="chats-list__name mb-1">Nicanor</h6>
+                    <small class="chats-list__time text-body-secondary">Yesterday</small>  
+                  </div>
+                </div>
+                <small class="chats-list__message mb-1 text-body-secondary">El automóvil es una silla de ruedas</small>
+              </li>
+              <li class="chats-list__item--unread list-group-item list-group-item-action">
+                <div class="chats-list__card d-flex">
+                  <img src="./assets/imgs/lalo.jpg" alt="User" class="chats-list__profile-image">
+                  <div class="chats-list__name-time-container">
+                    <h6 class="chats-list__name mb-1">Lalo</h6>
+                    <small class="chats-list__time  text-body-secondary">Monday</small>
+                  </div>
+                </div>
+                <small class="chats-list__message mb-1 text-body-secondary">La vida que yo he pasado 🎵</small>
+              </li>
+              <li class="chats-list__item--unread list-group-item list-group-item-action">
+                <div class="chats-list__card d-flex">
+                  <img src="./assets/imgs/roberto.jpg" alt="User" class="chats-list__profile-image">
+                  <div class="chats-list__name-time-container">
+                    <h6 class="chats-list__name mb-1">Roberto</h6>
+                    <small class="chats-list__time text-body-secondary">Friday</small>
+                  </div>
+                </div>
+                <small class="chats-list__message mb-1 text-body-secondary">Conocí a la Negra Ester</small>
+              </li>
+              <li class="chats-list__item--unread list-group-item list-group-item-action">
+                <div class="chats-list__card d-flex">
+                  <img src="./assets/imgs/hilda.jpg" alt="User" class="chats-list__profile-image">
+                  <div class="chats-list__name-time-container">
+                    <h6 class="chats-list__name mb-1">Hilda</h6>
+                    <small class="chats-list__time text-body-secondary">3 days ago</small>
+                  </div>
+                </div>
+                <small class="chats-list__message mb-1 text-body-secondary">La cuequera más grande de Chile</small>
+              </li>
+              <li class="chats-list__item--unread list-group-item list-group-item-action">
+                <div class="chats-list__card d-flex">
+                  <div class="chats-list__name-time-container">
+                    <img src="./assets/imgs/lautaro.jpg" alt="User" class="chats-list__profile-image">
+                    <h6 class="chats-list__name mb-1">Lautaro</h6>
+                    <small class="chats-list__time text-body-secondary">A week ago</small>  
+                  </div>
+                </div>
+                <small class="chats-list__message mb-1 text-body-secondary">Volver a Chile es como ver un film</small>
+              </li>
+              <li class="chats-list__item--unread list-group-item list-group-item-action">
+                <div class="chats-list__card d-flex">
+                  <div class="chats-list__name-time-container">
+                    <img src="./assets/imgs/oscar.jpg" alt="User" class="chats-list__profile-image">
+                    <h6 class="chats-list__name mb-1">Óscar</h6>  
+                    <small class="chats-list__time text-body-secondary">01-11-24</small>
+                  </div>
+                </div>
+                <small class="chats-list__message mb-1 text-body-secondary">El Parra menos Parra</small>
+              </li>
+            </ul>
+          </div>
+        </aside>
+        <!-- Current Chat -->
+        <section class="current-chat">
+            <header class="current-chat__header">
+                <img src="./assets/imgs/violeta.jpg" alt="User" class="current-chat__profile-image">
+                <h2 class="current-chat__user-name">Violeta</h2>
+                <button type="button" class="current-chat__search-toggle">
+                  <img src="./assets/icons/search.svg" alt="Search">
+                </button>
+            </header>
+            <input type="text" class="current-chat__search-input" placeholder="Search">
+            <!-- current chat messages area -->
+            <div class="current-chat__messages">
+              <div class="chat-bubble chat-bubble--user">¡Hola Violeta!
+                <small class="chat-bubble__time">19:01</small>
+              </div>
+              <div class="chat-bubble chat-bubble--received">Bonjour, comment puis-je vous aider ?
+                <small class="chat-bubble__time">19:02</small>
+              </div>
+              <div class="chat-bubble chat-bubble--user">¿Qué opinas sobre el estado actual del mundo?
+                <small class="chat-bubble__time">19:03</small>
+              </div>
+              <div class="chat-bubble chat-bubble--received">¡Ay, mi querida! El mundo está lleno de dolor y sufrimiento. La gente lucha por sobrevivir, por encontrar un lugar donde pertenecer. Pero también hay belleza, amor, y esperanza. Hay que seguir luchando por un mundo mejor, donde todos podamos vivir en paz y armonía. ¿No crees?
+                <small class="chat-bubble__time">19:04</small>
+              </div>
+            </div>
+            <!-- current chat bottom area -->
+            <div class="current-chat__footer">
+              <div class="dropdown">
+                <button class="current-chat__attachment-button dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                  <img src="./assets/icons/paperclip.svg" alt="Attach">
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <li><a class="dropdown-item" href="#"><img src="./assets/icons/file-earmark-text.svg" alt="File"> File</a></li>
+                  <li><a class="dropdown-item" href="#"><img src="./assets/icons/image.svg" alt="Photo"> Photo</a></li>
+                  <li><a class="dropdown-item" href="#"><img src="./assets/icons/file-play.svg" alt="Video"> Video</a></li>
+                </ul>
+              </div>
+                <textarea name="current-chat__input" id="" placeholder="Type a message"></textarea>
+                <button type="button" class="current-chat__send-button">
+                  <img src="./assets/icons/send-fill.svg" alt="Send">
+                </button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p class="footer">&copy 2024 <em>Tolevats</em></p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="./assets/js/chat.js"></script>
 </body>
 </html>

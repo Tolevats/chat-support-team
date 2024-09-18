@@ -24,6 +24,7 @@ Following the principles of **mobile first design and responsive design** this p
 
 ## 4. To be implemented in the near future 🚧 
 - Functional search bar.
+- Functional dropdown attachments.
 - Display window for every other chat.
-- Clicking on a profile photo should open a modal with personal information.
-- Database generation for handling elements dynamically.
+- Clicking on a profile photo should open a modal with basic user data.
+- Database generation for handling chat elements dynamically.
